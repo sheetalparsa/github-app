@@ -1,0 +1,36 @@
+.modal {
+  position: absolute;
+  width: 700px;
+  background: white;
+  border: 1px solid #ccc;
+  transition: 1.1s ease-out;
+  left: 50%;
+  top: 53%;
+  box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  max-height: 100%;
+ }
+
+ #name {
+   text-align: center;
+ }
+
+ .pagination {
+  display: flex;        
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+ }
+
+ .modal .toggle-button {
+   position: absolute;
+   right: 10px;
+   top: 5px;
+   align-items: right;
+ }
+
+
+ .list_modal {
+  float: right;
+ }

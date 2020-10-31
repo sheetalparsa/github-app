@@ -1,0 +1,21 @@
+.list > input {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+
+.data {
+  text-align: left;
+}
+
+ul {
+  display: table;
+  /* margin: 0 auto 3px; */
+  list-style-type: square;
+}
+
+li {
+  margin-bottom: 15px;
+}
