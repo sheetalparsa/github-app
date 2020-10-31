@@ -30,7 +30,7 @@ class Modal extends React.Component {
           <CloseIcon />
         </IconButton>
         <p id="name">{this.props.repo}</p>
-        <div className={classes.root}>
+        <div >
           <BarChart url={this.props.url} />
           <PieChart url={this.props.url} />
         </div>
