@@ -58,7 +58,7 @@ export default class List extends React.Component {
           <ul>
             {this.state.data.map((item, key) => {
               return (
-                <div className="data">
+                <div className="data" key={key}>
                   <li key={key} onClick={(e) => {this.showModal(key);}} >
                     {item.full_name}
                   </li>

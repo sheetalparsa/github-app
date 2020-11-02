@@ -26,7 +26,7 @@ class Modal extends React.Component {
 
     return (
       <div className="modal">
-        <IconButton className="toggle-button" onClick={this.onClose} startIcon={CloseIcon}>
+        <IconButton className="toggle-button" onClick={this.onClose} >
           <CloseIcon />
         </IconButton>
         <p id="name">{this.props.repo}</p>

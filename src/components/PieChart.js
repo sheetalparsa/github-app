@@ -22,7 +22,7 @@ export default class PieChart extends React.Component {
     let commit_activity_url = `${this.props.url}/stats/commit_activity`;
     let commit_activity_response = await axios.get(commit_activity_url);
     let commit_activity_data = commit_activity_response.data;
-
+    console.log(commit_activity_data);
     const months = [
       "January",
       "February",
@@ -39,22 +39,24 @@ export default class PieChart extends React.Component {
     ];
 
     let monthly_data = [];
-    for (let i = 0; i < 12; i++) {
-      let commit_sum = 0;
-      for (let j = 0; j < 4; j++) {
-        commit_sum = commit_sum + commit_activity_data[4 * i + j].total;
+    if(commit_activity_data.length > 0) {
+      for (let i = 0; i < 12; i++) {
+        let commit_sum = 0;
+        for (let j = 0; j < 4; j++) {
+          commit_sum = commit_sum + commit_activity_data[4 * i + j].total;
+        }
+
+        let temp = {
+          month: months[i],
+          commit: commit_sum,
+        };
+        monthly_data.push(temp);
       }
-
-      let temp = {
-        month: months[i],
-        commit: commit_sum,
-      };
-      monthly_data.push(temp);
-    }
-
+    }  
     this.setState({
       monthly_data: monthly_data,
     });
+    
   };
 
   render() {
